@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Hello Makhi</string>
+    <string name="nama_text">Hello \n\n This is <font color="red">Makhi Hakim Hakiki</font>\n\n
+        NIM:<font color="blue"><b>E41171041</b></font>
+    </string>
+    <!--<string name="nim_text">E41171041</string>-->
+</resources>
