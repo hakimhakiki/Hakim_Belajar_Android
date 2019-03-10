@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/activity_padding"
+    android:layout_marginLeft="@dimen/activity_padding"
+    android:layout_marginRight="@dimen/activity_padding"
+    android:layout_marginTop="@dimen/activity_padding"
+    android:background="@color/semiRed"
+    tools:context="com.hakim.indo.skorbadminton.MainActivity"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="0dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/scoreBoard_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/lightRed"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/layout_ina"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/layout_chn"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="@dimen/scoreboard_textPadding"
+                android:text="@string/ina_text"
+                android:textColor="@color/white"
+                android:textSize="@dimen/scoreboard_textSize" />
+
+            <TextView
+                android:id="@+id/scoreText_ina"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/scoreboard_textPadding"
+                android:text="@string/scoreText_ina"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/scoreboard_textSize" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_chn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toRightOf="@+id/layout_ina"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/scoreText_chn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/scoreboard_textPadding"
+                android:text="@string/scoreText_chn"
+                android:textColor="@color/yellow"
+                android:textSize="@dimen/scoreboard_textSize" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/scoreboard_textPadding"
+                android:text="@string/chn_text"
+                android:textColor="@color/yellow"
+                android:textSize="@dimen/scoreboard_textSize" />
+        </LinearLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/control_ina"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/control_chn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scoreBoard_layout">
+
+        <ImageView
+            android:id="@+id/flag_ina"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/flag_of_indonesia" />
+
+        <Button
+            android:id="@+id/ina_scoreMin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="inaAddMin"
+            android:text="@string/score2" />
+
+        <Button
+            android:id="@+id/ina_scoreMax"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="inaAddMax"
+            android:text="@string/score3" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/control_chn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/reset_button"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/control_ina">
+
+        <ImageView
+            android:id="@+id/flag_chn"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/flag_of_china" />
+
+        <Button
+            android:id="@+id/chn_scoreMin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="chnAddMin"
+            android:text="@string/score2" />
+
+        <Button
+            android:id="@+id/chn_scoreMax"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="chnAddMax"
+            android:text="@string/score3" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/reset_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="resetAll"
+        android:text="@string/reset_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

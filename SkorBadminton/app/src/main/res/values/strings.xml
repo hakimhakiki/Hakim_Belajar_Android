@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Skor Badminton</string>
+    <string name="scoreText_ina">0 : 0</string>
+    <string name="ina_text">INA</string>
+    <string name="chn_text">CHN</string>
+    <string name="scoreText_chn">0 : 0</string>
+    <string name="score2">+ 2</string>
+    <string name="score3">+ 3</string>
+    <string name="reset_text">Reset All</string>
+</resources>

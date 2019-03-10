@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_padding">5dp</dimen>
+    <dimen name="scoreboard_textPadding">10dp</dimen>
+    <dimen name="scoreboard_textSize">14pt</dimen>
+</resources>
